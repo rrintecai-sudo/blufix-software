@@ -26,7 +26,6 @@ export function UserMenu({ usuario }: UserMenuProps) {
             userButtonPopoverFooter: 'hidden',
           },
         }}
-        afterSignOutUrl="/login"
       />
     </div>
   )

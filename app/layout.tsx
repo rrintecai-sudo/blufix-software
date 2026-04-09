@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider localization={esES}>
+    <ClerkProvider localization={esES} afterSignOutUrl="/login">
       <html lang="es" className="dark">
         <body>{children}</body>
       </html>
