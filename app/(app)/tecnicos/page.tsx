@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { getTenantId } from '@/lib/tenant'
 import { formatUSD, formatBs, formatFecha, formatTasa, usdToBs } from '@/lib/utils'
 import { LiquidacionForm } from '@/components/tecnicos/LiquidacionForm'
-import { startOfWeek, endOfWeek, startOfMonth, endOfMonth, subWeek, subMonth, format } from 'date-fns'
+import { startOfWeek, endOfWeek, startOfMonth, endOfMonth, subWeeks, subMonths } from 'date-fns'
 
 export default async function TecnicosPage({
   searchParams,
@@ -27,7 +27,7 @@ export default async function TecnicosPage({
 
   switch (periodo) {
     case 'semana_anterior':
-      const semAnt = subWeek(ahora, 1)
+      const semAnt = subWeeks(ahora, 1)
       desde = startOfWeek(semAnt, { weekStartsOn: 1 })
       hasta = endOfWeek(semAnt, { weekStartsOn: 1 })
       break
@@ -36,7 +36,7 @@ export default async function TecnicosPage({
       hasta = endOfMonth(ahora)
       break
     case 'mes_anterior':
-      const mesAnt = subMonth(ahora, 1)
+      const mesAnt = subMonths(ahora, 1)
       desde = startOfMonth(mesAnt)
       hasta = endOfMonth(mesAnt)
       break
