@@ -17,7 +17,7 @@ export default function OnboardingPage() {
           </p>
         </div>
         <div className="pt-2">
-          <UserButton afterSignOutUrl="/login" />
+          <UserButton />
         </div>
       </div>
     </div>
