@@ -31,7 +31,7 @@ export function OrdenCambiarEstado({ orden, tecnicos }: Props) {
   ].filter((e) => {
     if (e === 'cancelado') return true
     const idxActual = ESTADOS_ORDEN_FLOW.indexOf(estadoActual)
-    const idxTarget = ESTADOS_ORDEN_FLOW.indexOf(e)
+    const idxTarget = ESTADOS_ORDEN_FLOW.indexOf(e as EstadoOrden)
     return idxTarget > idxActual
   }) as EstadoOrden[]
 
