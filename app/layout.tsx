@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   description: 'Plataforma SaaS para talleres de reparación de celulares',
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
+
 export default function RootLayout({
   children,
 }: {
