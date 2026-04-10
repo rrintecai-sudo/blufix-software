@@ -20,23 +20,12 @@ export default function DemoLoginPage() {
           </p>
         </div>
 
-        <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 text-sm text-center space-y-1">
-          <p className="text-foreground font-medium">Credenciales de acceso</p>
-          <p className="text-muted-foreground">
-            <span className="text-foreground">Email:</span> demo@blufix.pro
-          </p>
-          <p className="text-muted-foreground">
-            <span className="text-foreground">Contraseña:</span> BluFix2026!
-          </p>
-        </div>
-
-        <form action={action} className="space-y-4">
+<form action={action} className="space-y-4">
           <div>
             <label className="text-sm font-medium text-foreground block mb-1">Email</label>
             <input
               name="email"
               type="email"
-              defaultValue="demo@blufix.pro"
               required
               className="w-full px-3 py-2 rounded-lg border border-input bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
@@ -46,7 +35,6 @@ export default function DemoLoginPage() {
             <input
               name="password"
               type="password"
-              defaultValue="BluFix2026!"
               required
               className="w-full px-3 py-2 rounded-lg border border-input bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
